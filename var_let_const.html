@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // global scope
+        var a = "hi";
+        var a = "hello"; //redecrle allow
+        a = "hey";//re-assign allowed
+        console.log(a);
+
+        let b = "Hello sam";
+        // ler b = "welcome"; // redeclrae not allow
+        b = "welcome soni";  // re-assign allowed
+        console.log(b);
+
+        const c = 20;
+        //const c = 10;
+        console.log(c);
+    </script>
+    <script>
+        function av(){
+            var a = 10;
+            let b = 20;
+            const c = 30;
+
+            if(true){
+            var a = 11;
+            let b = 21;
+            const c = 31;
+            document.write("---------------Inside the Block----------");
+            document.write("a =" + a + "<br>");
+            document.write("b =" + b + "<br>");
+            document.write("c =" + c + "<br>");
+                 
+            }
+             document.write("---------------Outside the Block----------");
+            document.write("a=" + a + "<br>");
+            document.write("b=" + b + "<br>");
+            document.write("c=" + c + "<br>");
+        }
+        av();
+    </script>
+</body>
+</html>
