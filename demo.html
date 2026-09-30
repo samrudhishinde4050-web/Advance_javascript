@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function studentInfo(name,address,...subject){
+        document.write(`student name: ${name} <br>`);
+        document.write(`subject : ${subject} <br><hr>`);
+    }
+    studentInfo("vamini","Pune","HTML","CSS","JAVA");
+    studentInfo("vrunda","Kolhapur","HTML","CSS","JAVA","Node");
+</script>
+
+<script>
+    function showSum(name, ...number){
+        let total = 0;
+        for(let num of number){
+            total += num;
+        }
+        console.log(`Hello, ${name}`);
+        console.log(`You enter ${number.length} number : ${number.join(", ")}`, );
+        console.log(`Total : ${total}`);
+
+    }
+    showSum("Rajani", 40,78,89,90);
+    showSum("Rajat", 40,78,89,90,89,89);
+
+</script>
+
+</body>
+</html>
