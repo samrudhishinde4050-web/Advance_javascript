@@ -1,54 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest Parameter</title>
-</head>
-
-<body>
-
-<script>
-
-function sumRest(name, ...args) {
-
-    document.write(`Hello ${name}<br>`);
-
-    let sum = 0;
-
-    for (let i in args) {
-        sum += args[i];
-    }
-
-    document.write("Total Marks " + sum + "<br>");
-}
-
-
-function SumRest1(name, address, course, ...marks) {
-
-    document.write(
-        "My name is " + name +
-        " I am from " + address +
-        " Contact me " + course + "<br>"
-    );
-
-    let sum = 0;
-
-    for (let i in marks) {
-        sum += marks[i];
-    }
-
-    document.write("Total Marks " + sum + "<br><br>");
-}
-
-
-sumRest("sam", 40, 80, 80);
-
-SumRest1("sam", "Kolhapur", "Mern Stack", 40, 80, 80);
-
-SumRest1("sonal", "Kolhapur", "Mern Stack", 40, 80, 80);
-
-</script>
-
-</body>
-</html>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Rest Parameter</title> 
+</head> 
+ 
+<body> 
+ 
+<script> 
+ 
+function sumRest(name, ...args) { 
+ 
+    document.write(`Hello ${name}<br>`); 
+ 
+    let sum = 0; 
+ 
+    for (let i in args) { 
+        sum += args[i]; 
+    } 
+ 
+    document.write("Total Marks " + sum + "<br><br>"); 
+} 
+ 
+ 
+function SumRest1(name, address, course, ...marks) { 
+ 
+    document.write( 
+        "My name is " + name + 
+        " I am from " + address + 
+        " Contact me " + course + "<br>" 
+    ); 
+ 
+    let sum = 0; 
+ 
+    for (let i in marks) { 
+        sum += marks[i]; 
+    } 
+ 
+    document.write("Total Marks " + sum + "<br><br>"); 
+} 
+ 
+ 
+sumRest("sam", 40, 80, 80); 
+ 
+SumRest1("sam", "Kolhapur", "Mern Stack", 40, 80, 80); 
+ 
+SumRest1("sonal", "Kolhapur", "Mern Stack", 40, 80, 80); 
+ 
+</script> 
+ 
+</body> 
+</html> 

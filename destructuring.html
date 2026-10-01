@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object Destructuring - old way
+        const person = {
+            name: "Vamini",
+            age: 20,
+            gender: "Female",
+        };
+
+        document.write("Name :" +
+            person.name + 
+            " Age : " +
+            person.age +
+            " Gender :" +
+            person.gender,
+        );
+
+        let name1 = person.name;
+        let age1 = person.age;
+        let gender1 = person.gender;
+
+        console.log(name1);
+        console.log(age1);
+        console.log(gender1);
+    </script>
+
+    <script>
+        // object Destructuring - New ES6 way
+        const person1 ={
+            name: "Vrunda",
+            age: 22,
+            gender: "Female",
+        };
+
+        const {name, age, gender} = person1;
+        console.log(name);
+        console.log(age);
+        console.log(gender);
+        document.write(
+            "Name :" + name + "Age :" + age + "Gender:" + gender,
+        );
+    </script>
+    <script>
+
+    //Destructring in function parameterss
+    function showInfo({name, age, city}) {
+        document.write(`Name : ${name}, Age : ${age}, City: ${city}`);
+
+    }
+    const person2 = {name : "Rajani", age :"22", city :"Pune"};
+    showInfo(person2);
+    </script>
+
+
+<script>
+    //Nested object Destructuring
+    const student = {
+        uname: "Prathmesh",
+        marks: {maths: 90, science: 87},
+    };
+    const {
+    uname,
+    marks: {maths, science},
+  } = student;
+
+  document.write(`<br> Username : ${uname}, Math : ${maths}, Science : ${science}`,);
+</script>
+<script>
+    const arrValue = ['one', 'two', 'three'];
+
+    const [x, y, z] = arrValue;
+    console.log(x);
+    console.log(y);
+    console.log(z);
+</script>
+
+<script>
+//swap variables easily
+let a = 5, b = 10;
+[a, b] = [b, a];
+document.write(`<br> a = ${a} And b = ${b}`);
+</script>
+
+<script>
+    const number = [10, 20, 30, 40, 50];
+    const [first, second, ...rest] = number;
+    for (let i in number)
+    document.write(``)
+</script>
+
+
+
+
+    
+</body>
+</html>
