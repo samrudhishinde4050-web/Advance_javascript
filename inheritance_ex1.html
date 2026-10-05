@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // parent class
+    class person{
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        showInfo(){
+            document.write(`<h1>Person Information :</h1> - Name : ${this.name}, Age : ${this.age} <br>`,);
+        }
+    }
+
+    //chlid class
+    class student extends person{
+        constructor(name, age, rollNo){
+            super(name, age);
+            this.rollno = rollNo;
+            this.showstudent(); // another way
+        }
+        showstudent(){
+             document.write(`<h1>Student Information :</h1> - <h4>Name : ${this.name}, Age : ${this.age}, RollNo :${this.rollno}</h4> <br>`,);
+        }
+    }
+    class employee extends person{
+        constructor(name, age, rollNo, salary, emp_id){
+            super(name, age, rollNo);
+            this.salary = salary;
+            this.emp_id = emp_id;
+        }
+        showemployee(){
+             document.write(`<h1>Employee Information :</h1> -<h3> Name : ${this.name}, Age : ${this.age}, RollNo : ${this.rollNo}, Salary : ${this.salary}, Emp_id : ${this.emp_id}<h3> <br>`,);
+        }
+    }
+
+    const s1 = new student("Prathamesh", 22, 1);
+    s1.showstudent();
+    const s2 = new student("Patil", 22, 8);
+    //s2.showstudent(); // another way
+
+    const e1 = new employee("Sandesh", 22, 2, 200000, 101);
+    e1.showemployee();
+
+    const p1 = new person("Aniket", 22, );
+    s1.showInfo();
+
+
+    </script>
+    
+</body>
+</html>
