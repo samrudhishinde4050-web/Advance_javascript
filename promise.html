@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Example 1
+        let promise = new Promise(function(resolve, reject){
+            let suceess = false;
+
+            if(suceess) {
+                reslove("opertion successffully");
+            } else{
+                reject("opertion failed");
+            }
+        });
+</script>
+
+<script>
+    function login(username, password){
+        return new Promise(function (resolve, reject){
+            if(username === "admin" && password === "1234"){
+                resolve("Login Successfully");
+            }
+            else{
+                reject("Invalid password or username");
+            }
+        });
+    }
+
+    login("admin", "1234")
+    .then(function(result){
+        console.log(result);
+    })
+
+    .catch(function(error){
+        console.log(error);
+    });
+</script>
+
+<script>
+    // 
+
+    let promise2 = new Promise(function(resolve2,reject2){
+           let username = prompt("Enter username"); 
+        let password = prompt("Enter password");
+
+        if(username === "admin" && password === "1234"){
+            resolve2("Login Successfully");
+        }else{
+            reject2("Invalid password or username");
+        }
+    });l
+
+    promise2
+    .then((msg) => {
+        document.write("<h2 style= 'color:green'>" + msg + "</h2>");
+    })
+    .catch((err) =>{
+         document.write("<h2 style= 'color:red'>" + err + "</h2>");
+    })
+    .finally(() =>{
+         document.write(<p style= 'color:blue'>Login attempt Completed</p>);
+    });
+</script>
+
+<script>
+    let promise3 = new promise3
+</script>
+
+</body>
+</html>
