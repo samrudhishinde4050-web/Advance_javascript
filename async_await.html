@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Async Awat Exampple</h2>
+    <pre id="output"></pre>
+</body>
+<script>
+const output = document.getElementById("output");
+
+function logo(msg){
+    output.textContent += msg;
+}
+
+// boil water
+function boilWater(){
+    return Promise((resolve) => {
+        setTimeout(() => resolve("Water boiled...."), 2000);
+    });
+}
+
+function makeTea(){
+    return Promise((resolve) => {
+        setTimeout(() => resolve("Tea is ready...."), 2000);
+    });
+}
+
+function toastBread(){
+    return Promise((resolve) => {
+        setTimeout(() => resolve("Bread Toasted...."), 2000);
+    });
+}
+
+
+async function makeBreakfast(){
+    try{
+        const step_1 = await BoilWater();
+    log("1" + step1);
+
+
+   const step_2 = await makeTea();
+    log("2" + step2);
+
+
+   const step_3 = await toastBread();
+    log("3" + step3);
+
+log("All breackfst items are ready to eat");
+  
+}
+catch(error){
+    log("Error occured" = + error);
+}
+
+finally{
+    log("Breakfst prepartin completed");
+}
+}
+log("Kitchen Opened");
+makeBreakfast();
+    
+    
+</script>
+</html>
