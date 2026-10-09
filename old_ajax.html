@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Load Local Data</h2>
+    <button onclick="loadText()">Load Text file</button>
+        <button onclick="loadJSON()">Load JSON file</button>
+
+        <pre id="ajaxData">Click a button load the data</pre>
+
+        <script>
+            function loadText(){
+                var xhr = new XMLHttpRequest(); // create the new ajax request object
+
+                xhr.open("GET", "file.txt", true);
+                // "GET " - Typew of Request
+                // file.txt = file to load
+                // true - make the request asyncronus (non - blocking)
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        document.getElementById("ajaxData").textContent = xhr.responseText;
+                    }
+                    else{
+                        document.getElementById("ajaxData").textContent = "Error loading text file";
+                    }
+                };
+
+                xhr.onerror = function(){
+                    document.getElementById("ajaxData").textContent = "Request failed";
+                };
+                xhr.send();
+
+            }
+
+
+            function loadJSON(){
+                var xhr = new XMLHttpRequest();
+
+            xhr.open("GEt", "data.json", true);
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    var data = JSON.parse(xhr.responseText);
+                    document.getElementById("ajaxData").textContent = JSON.stringify(data, null,4);
+                }
+                else{
+                    document.getElementById("ajaxData").textContent = "Error loading Json file";
+                }
+                };
+                xhr.onerror = function(){
+                    document.getElementById("ajaxData").textContent = "Request";
+                };
+                xhr.send();
+            }
+            
+        </script>
+
+
+
+</body>
+</html>
