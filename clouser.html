@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function outer() {
+     let x = 10;
+     function inner(){
+         document.write(x);
+     }
+     return inner;
+
+   }   
+let f = outer();
+f();
+
+</script> -->
+
+<!-- <script>
+    function count(){
+        let count = 0;
+        function inner(){
+            count++;
+            console.log(count);
+        }
+        return inner;
+    }
+    let counter = count();
+    counter();
+    counter();
+</script> -->
+
+<!-- <script>
+    function card(){
+        let items = 1;
+
+    
+    return function (){
+        items++;
+        console.log("Items in card", items);
+    };
+}
+    let addItem = card();
+    addItem();
+    addItem();
+    addItem();
+
+</script> -->
+
+<script>
+    function banckAccount(){
+        let balance = 1000;
+        return function deposite(amount){
+            balance = balance + amount;
+
+            console.log("Bacak Balance : " + balance);
+        };
+    }
+
+    let myAccount = banckAccount();
+    myAccount(500);
+     myAccount(1500);
+      myAccount(500);
+</script>
+// Defination :- A function is defined inside another function and inner funtion remember the variable of outer function.
+
+
+
+</body>
+</html>
