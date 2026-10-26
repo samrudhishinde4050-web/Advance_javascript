@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- setTimeOut() - Execute code after delay
+    Syntax : setTimeout(function, delay); -->
+    
+    <button onclick="showMessage()"> Click me</button>
+
+    <script>
+        function showMessage(){
+            document.write("please wait......");
+        }
+        setTimeout(function(){
+            document.write("<br> Hello Student");
+        }, 5000);
+    </script>
+  <p id = "message">waitting for message</p>    
+    <script>
+           setTimeout(function (){
+            document.getElementById("message").textContent = "welcome to js";
+           }, 4000);
+    </script>
+
+    <!-- setInterval() - Execute code repeatdaly
+    Syntax : setInterval(function, interval); -->
+
+    <!-- <script>
+        setInterval(function (){
+            console.log("Hello Student welcome interval example");
+        }, 3000);
+    </script> -->
+
+    <h1>Counter Example</h1>
+    <h2 style="color: brown" id ="count">0</h2>
+    <script>
+        let count = 0;
+        setInterval(function (){
+            count++;
+            document.getElementById("count").textContent = count;
+        }, 1000);
+    </script>
+</body>
+</html>
