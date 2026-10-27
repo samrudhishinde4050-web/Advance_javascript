@@ -1,0 +1,25 @@
+[{
+    "name" : "Samrudhi",
+    "age" : 22,
+    "city" : "Pune",
+    "skill" : ["Java", "HTML","CSS", "MySQL"]
+},
+
+{
+    "name" : "Sonal",
+    "age" : 23,
+    "city" : "Kolhapur",
+    "skill" : ["Java", "HTML","CSS"]
+},
+{
+    "name" : "Sakshi",
+    "age" : 21,
+    "city" : "Pune",
+    "skill" : ["Java", "HTML","CSS", "PYTHON"]
+},
+{
+    "name" : "Sam",
+    "age" : 22,
+    "city" : "Pimpri",
+    "skill" : ["Java", "HTML","CSS", "Devops"]
+}]
