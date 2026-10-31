@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map method</title>
+</head>
+<body>
+<script>
+    //1. Map
+    //Defination =>The map() method executes a callback function for every array element and return a new array with new values.
+
+    let numbers = [10, 20, 30 ,40];
+    let result = numbers.map(function(num){
+       return num * 2;
+    });
+    console.log(result);
+</script>
+
+<script>
+//Convert names to Uppercase
+let names = ["sam", "sonal", "vrunda", "vamini"];
+let result1 = names.map((name) => name.toUpperCase());
+console.log(result1);
+</script>
+<script>
+    //calculate price with gst - 1.18%
+
+    let prices = [100, 200, 300];
+    let finalPrice = prices.map((price) => price * 1.18);
+    console.log(finalPrice);
+</script>
+    
+<script>
+    //exatract stdent name
+    let students = [
+        {name: "Rahul", marks: 90},
+        {name: "Samrudhi", marks: 98},
+        {name: "Rudra", marks: 96},
+        {name: "Vrunda", marks: 99},
+    ];
+    let server = students.map((student) => student.name);
+    console.log(server);
+</script>
+
+<script>
+    //2. filter()
+
+    let numbers2 = [10, 15, 20, 22, 45, 78, 66, 99];
+    let result3 = numbers2.filter(num => num % 2 === 0);
+    console.log(result3);
+</script>
+
+<script>
+    let marks  = [35, 59, 32, 25, 65, 33, 77];
+    let pass = marks.filter(mark => mark >= 40);
+    console.log(pass);
+</script>
+
+<script>
+    let price2 = [200, 300, 1000, 800, 150, 1200, 1400, 900];
+    let pricesss = price2.filter(price => price <= 1000);
+    console.log(pricesss);
+</script>
+
+<script>
+    let employees =[
+        {name: "Sachin", active:true},
+         {name: "Sakshi", active:true},
+          {name: "Mahesh", active:false},
+           {name: "Vivek", active:true},
+            {name: "Rhi", active:false},
+    ];
+
+    let result5 =  employees.filter((emp) => emp.active);
+    console.log(result5);
+</script>
+
+<script>
+    let employees1 =[
+        {name: "Sachin", active:true},
+         {name: "Sakshi", active:true},
+          {name: "Mahesh", active:false},
+           {name: "Vivek", active:true},
+            {name: "Rhi", active:false},
+    ];
+
+    let result55 =employees1.filter((emp) => !emp.active);
+    console.log(result55);
+</script>
+
+<script>
+    //3.foreach() - perform an anction for every element
+    // Definantion - the forEach() method executes callback function for each elements of an array, but it doesnot return a new array
+
+    let name2 = ["Rahul", "Ganesh", "Samrth", "Khagesh"];
+    name2.forEach(function(name){
+        console.log(name);
+    });
+</script>
+
+<script>
+    let number5 = [2, 3, 4, 5];
+    number5.forEach((num) => {
+        console.log("Number is :", num);
+         console.log("square is :", num * num);
+
+    })
+
+</script>
+
+<script>
+    //4.Reduce() - convert the array into a single result
+    //Defination - The reduce() methods is processes array elements and accumlates then into single result, such as the number, string, object, or another array
+  //syntax
+//   array.reduce((accumalter, currentvalue) =>{
+//     return updated accumaltor
+//   }, initialvaule);
+  //accumaltor : store the accumaltor result
+  // currentvalues : the current arry elements
+  //initiavalue value : the staring value of accumlator
+    let numbers7 = [10, 20, 39, 48, 89];
+    let total = numbers7.reduce((sum, num) =>{
+        return sum + num;
+    }, 0);
+
+
+</script>
+
+<script>
+    let number8 = [29, 49, 10, 67];
+    let maximum = number8.reduce((max, num) =>{
+        return num ? max > num : max;
+    }, number8[0]);
+    console.log(maximum)
+</script>
+
+<script>
+    // 5. find()
+    //Defination - find() return the first element that satisfies the given condition
+    let number9 = [10, 20, 30, 40, 50];
+    let res = number9.find(function(num){
+        return num > 25;
+    });
+    console.log("find method:" +res);
+</script>
+
+<script>
+    // 5. find()
+    //Defination - find() return the first element that satisfies the given condition
+    let number10 = [10, 20, 30, 40, 50];
+    let res1 = number9.find(function(num){
+        return num > 90;
+    });
+    console.log("find method:" +res1);
+</script>
+</body>
+</html>
