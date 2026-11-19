@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Change Background Color  using Class Selector</h1>
+
+    <h2 class="heading" >HTML - To crete website Structure</h2>
+    <h2 class="heading">CSS - To created styling and desiging purpose</h2>
+    <h2 class="heading">Bootstrp - CSS readymade with Responsive Design</h2>
+    <h2 class="heading">Js - Events and Functionality on websites</h2>
+    
+
+    <button onclick="changeColor()">Change Color</button>
+    <script>
+        function changeColor(){
+            
+            let headings = document.getElementsByClassName("heading");
+            for(let i = 0; i < headings.length; i++){
+                headings[i].style.background = "blue";
+                 headings[i].style.color = "white";
+                   headings[i].style.padding = "20px";
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
